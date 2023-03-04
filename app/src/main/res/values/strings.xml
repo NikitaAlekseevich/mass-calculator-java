@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">My Mass Calculator</string>
+    <string name="enterValue_text">Введите значение:</string>
+    <string name="_0">0</string>
+    <string name="calculate_text">Рассчитать</string>
 </resources>

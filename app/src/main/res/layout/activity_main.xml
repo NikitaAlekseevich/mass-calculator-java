@@ -8,7 +8,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Введите значение:"
+        android:text="@string/enterValue_text"
         android:textSize="16sp"/>
 
     <EditText
@@ -17,13 +17,13 @@
         android:layout_height="wrap_content"
         android:inputType="numberDecimal"
         android:textSize="16sp"
-        android:hint="0"/>
+        android:hint="@string/_0"/>
 
     <Button
         android:id="@+id/calculateButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Рассчитать"
+        android:text="@string/calculate_text"
         android:textSize="16sp"
         android:layout_marginTop="16dp"/>
 

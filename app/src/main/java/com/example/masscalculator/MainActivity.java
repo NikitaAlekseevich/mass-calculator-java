@@ -9,9 +9,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.masscalculator.R;
-
-
 public class MainActivity extends AppCompatActivity {
 
     private EditText inputEditText;
@@ -40,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         // получение входного значения от пользователя
         String inputString = inputEditText.getText().toString().trim();
         if (inputString.isEmpty()) {
-            Toast.makeText(this, "Введите значение", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "@string/enterValue_text", Toast.LENGTH_SHORT).show();
             return;
         }
         double inputValue = Double.parseDouble(inputString);
