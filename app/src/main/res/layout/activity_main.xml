@@ -41,4 +41,11 @@
         android:layout_height="wrap_content"
         app:srcCompat="@mipmap/ic_mirea" />
 
+    <Button
+        android:id="@+id/btnAbout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="About"
+        android:text="@string/str_about" />
+
 </LinearLayout>

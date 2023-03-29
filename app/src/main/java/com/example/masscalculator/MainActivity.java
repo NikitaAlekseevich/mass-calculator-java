@@ -1,6 +1,7 @@
 package com.example.masscalculator;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -18,6 +19,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        Intent intent = new Intent(this,  AboutProgram.class);
+        assert binding.btnAbout != null;
+        binding.btnAbout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(intent);
+            }
+        });
 
         // установка обработчика событий на кнопку "Рассчитать"
         binding.calculateButton.setOnClickListener(new View.OnClickListener() {
@@ -52,4 +62,6 @@ public class MainActivity extends AppCompatActivity {
                 karats, grams, kilograms, centners, tons, pounds, ounces);
         binding.resultTextView.setText(resultString);
     }
+
+
 }

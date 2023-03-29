@@ -3,4 +3,7 @@
     <string name="enterValue_text">Введите значение:</string>
     <string name="_0">0</string>
     <string name="calculate_text">Рассчитать</string>
+    <string name="str_about">О программе</string>
+    <string name="info">Калькулятор единиц измерения массы. Сделан студентом Ципуном Никитой Алексеевичем (ИКБО-27-21)</string>
+    <string name="goback">Назад</string>
 </resources>
