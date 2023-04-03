@@ -29,23 +29,21 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // установка обработчика событий на кнопку "Рассчитать"
+//         установка обработчика событий на кнопку "Рассчитать"
         binding.calculateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                calculate();
+                String resultString = calculate();
+                intent.putExtra("result", resultString);
+                startActivity(intent);
             }
         });
     }
 
     // метод для расчета значений в других единицах измерения
-    private void calculate() {
+    private String calculate() {
         // получение входного значения от пользователя
         String inputString = binding.inputEditText.getText().toString().trim();
-        if (inputString.isEmpty()) {
-            Toast.makeText(this, "@string/enterValue_text", Toast.LENGTH_SHORT).show();
-            return;
-        }
         double inputValue = Double.parseDouble(inputString);
 
         // расчет значений в других единицах измерения
@@ -58,9 +56,9 @@ public class MainActivity extends AppCompatActivity {
         double ounces = inputValue * 35.274;
 
         // форматирование результатов и вывод в текстовое поле
-        @SuppressLint("DefaultLocale") String resultString = String.format("Караты: %.2f\nГраммы: %.2f\nКилограммы: %.2f\nЦентнеры: %.2f\nТонны: %.2f\nФунты: %.2f\nУнции: %.2f",
+        String resultString = String.format("Караты: %.2f\nГраммы: %.2f\nКилограммы: %.2f\nЦентнеры: %.2f\nТонны: %.2f\nФунты: %.2f\nУнции: %.2f",
                 karats, grams, kilograms, centners, tons, pounds, ounces);
-        binding.resultTextView.setText(resultString);
+        return resultString;
     }
 
 
