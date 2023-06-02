@@ -16,7 +16,8 @@ public class AboutProgram extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        com.example.masscalculator.databinding.ActivityMainBinding binding = ActivityMainBinding.inflate(getLayoutInflater());
+        com.example.masscalculator.databinding.ActivityMainBinding binding = ActivityMainBinding.
+                inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         setContentView(R.layout.activity_about_program);
 
